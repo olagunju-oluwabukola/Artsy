@@ -35,8 +35,8 @@
           <img src="/public/Woman get online delivery.png" alt="">
         
         <p class="mb-2 text-[12px]">Hey {{ name }}. Thanks for you purchase of ${{ totalPrice }}.</p>
-        <p class="text-[12px] mb-2">Cheers to being <router-link to="/" class="text-blue-600">Artsy🎉.</router-link> </p>
-        <button @click="closeModal" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Close</button>
+        <p class="text-[12px] mb-2"> to being <router-link to="/" class="text-blue-600">Artsy🎉.</router-link> </p>
+      <router-link to="/marketplace" @click="closeModal" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Close</router-link>
       </div>
     
     </div>

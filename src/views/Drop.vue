@@ -1,12 +1,10 @@
-<!-- eslint-disable vue/multi-word-component-names -->
+
 <template>
-  Drop
+  <DropComp/>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import DropComp from '../components/DropComp.vue'
 </script>
 
 <style>

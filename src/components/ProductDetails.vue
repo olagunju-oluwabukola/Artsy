@@ -1,35 +1,39 @@
 <template>
   <div class="product-detail container mx-auto py-8">
-    <div class="flex flex-col md:flex-row">
+    <div class="flex flex-col md:flex-row border border-gray-100 border-rounded-full p-6 b">
       <div class="flex-1">
-        <img v-if="product.image" :src="product.image" alt="Product Image" class="w-full h-4/6 rounded-md" />
+        <img v-if="product.image" :src="product.image" alt="Product Image" class="w-full  rounded-md" />
         <p v-else>Image not available</p>
       </div>
 
-      <div class="flex-1 md:pl-8">
-        <h1 class="text-3xl font-bold mb-4">{{ product.name || 'Product Name Unavailable' }}</h1>
+      <div class="flex-1 md:pl-8 border border-black mt-7 md:mt-0  ml-0 md:ml-10 p-6 md:p-5">
+        <h1 class="text-2xl md:text-3xl font-bold mb-4">{{ product.name || 'Product Name Unavailable' }}</h1>
         <p class="text-lg font-semibold mb-2">Price: ${{ product.price || 'N/A' }}</p>
-        <p class="text-sm mb-4">Created by: <span class="font-bold">{{ product.artist || 'Unknown' }}</span></p>
-
+        <hr>
+        <p class="text-xl mb-4 font-bold">Created by: <span class="font-thin">{{ product.artist || 'Unknown' }}</span></p>
+        <hr>
         <!-- FAQ-style Layout -->
         <div class="faq-section">
-          <div class="faq-item">
-            <h3 class="text-xl font-bold cursor-pointer" @click="toggleSection('description')">Description</h3>
-            <p v-if="isOpen.description" class="mt-2">
+          <div class="faq-item ">
+            <h3 class="text-xl font-bold cursor-pointer mb-4" @click="toggleSection('description')">Description <font-awesome-icon icon="sort-down" class="text-xl" /> </h3>
+            <p v-if="isOpen.description" class="mt-2 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.
             </p>
+            <hr>
           </div>
           <div class="faq-item mt-4">
-            <h3 class="text-xl font-bold cursor-pointer" @click="toggleSection('listings')">Listings</h3>
+            <h3 class="text-xl font-bold cursor-pointer mb-4" @click="toggleSection('listings')">Listings <font-awesome-icon icon="sort-down" class="text-xl" /></h3>
             <p v-if="isOpen.listings" class="mt-2">
               Detailed listing information will appear here.
             </p>
+            <hr>
           </div>
           <div class="faq-item mt-4">
-            <h3 class="text-xl font-bold cursor-pointer" @click="toggleSection('status')">Status</h3>
+            <h3 class="text-xl font-bold cursor-pointer mb-4" @click="toggleSection('status')">Status <font-awesome-icon icon="sort-down" class="text-xl" /></h3>
             <p v-if="isOpen.status" class="mt-2">
               Product status details go here.
             </p>
+            <hr>
           </div>
         </div>
 
@@ -52,7 +56,7 @@
       :to="{ name: 'cart', params: { id: related.id } }"
       class="carousel-item w-48"
     >
-      <img :src="related.image" alt="Related Product" class="w-full h-32 rounded-md cursor-pointer" />
+      <img :src="related.image" alt="Related Product" class="w-full  rounded-md cursor-pointer" />
       <p class="mt-2 text-center font-semibold">{{ related.name }}</p>
     </router-link>
   </div>
