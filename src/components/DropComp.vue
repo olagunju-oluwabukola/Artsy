@@ -18,7 +18,7 @@
           :key="index"
           class="border rounded-lg md:flex shadow-md overflow-hidden"
         >
-          <div class="relative md:w-1/2 p-2 md:">
+          <div class="relative md:w-1/2 p-2 ">
             <img
               :src="drop.image"
               :alt="drop.title"

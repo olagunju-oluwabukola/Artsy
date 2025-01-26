@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full lg:w-64 p-4 border-r">
+    <div class="w-full hidden md:block  lg:w-64 p-4 border-r">
       <h2 class="text-xl mb-4">Filter</h2>
       <div class="mb-6">
         <h3 class="font-semibold">By category</h3>
